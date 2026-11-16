@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Coast to Crusi//Wedding//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:crusi-by-the-coast-20270501
+DTSTAMP:20261116T000000Z
+DTSTART;VALUE=DATE:20270501
+DTEND;VALUE=DATE:20270502
+SUMMARY:Coast to Crusi - C & K Wedding
+LOCATION:Butterfly Blu\, Brenton-on-Sea\, Western Cape
+DESCRIPTION:Ceremony at 15:00. Guests will be directed to the ceremony on arrival.
+END:VEVENT
+END:VCALENDAR
