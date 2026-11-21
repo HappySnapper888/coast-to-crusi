@@ -126,6 +126,17 @@ section[id]{scroll-margin-top:12px}
 .stay-more .button{margin-top:0}
 .stay-note{margin-top:16px;font-size:14px;color:var(--muted)}
 </style>
+<style>
+/* Centre every section heading */
+.story>h2{text-align:center;margin-top:0;margin-bottom:clamp(28px,4vw,48px)}
+.detail-grid>div:first-child{grid-column:1/-1;text-align:center}
+.detail-grid{grid-template-columns:minmax(0,620px);justify-content:center;gap:clamp(20px,3vw,36px)}
+.stay-head{text-align:center;margin-inline:auto}
+.stay-more{justify-content:center}
+.stay-note{text-align:center}
+.stay-list{grid-template-columns:repeat(2,minmax(0,1fr));max-width:820px;margin-inline:auto}
+@media(max-width:640px){.stay-list{grid-template-columns:minmax(0,1fr)}}
+</style>
 </head>
 <body>
 <header id="top"><a class="mark" href="index.html" aria-label="C and K home">C &amp; K</a><nav aria-label="Wedding navigation"><a href="index.html#wedding">Details</a><a href="dress-code.html">Dress Inspo</a><a href="index.html#stay">Stay</a><a href="index.html#rsvp">RSVP</a></nav></header>
@@ -144,9 +155,9 @@ section[id]{scroll-margin-top:12px}
 <p>We’d love for you to join us as we get married and celebrate together by the sea.</p>
 </section>
 <section class="intro story" aria-labelledby="story-title">
+<h2 id="story-title">Our Story</h2>
 <div class="story-layout">
 <div class="story-copy">
-<h2 id="story-title">Our Story</h2>
 <p>Some love stories begin with a chance meeting, while others find their way back to where they started.</p>
 <p>Having first known each other as friends in high school, our paths crossed again over the past few years, and what began as a reconnection slowly blossomed into something so much more. Through the seasons of life, we have grown together in love, strengthened our faith, and discovered just how special it is to have one another by our side.</p>
 <p>Now, we find ourselves embarking on our greatest adventure yet – a lifetime together. We feel incredibly blessed and grateful to celebrate this special day surrounded by the family and friends who have loved, supported and shaped our journey.</p>
