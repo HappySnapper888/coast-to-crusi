@@ -111,9 +111,24 @@ section[id]{scroll-margin-top:12px}
 .story-photo{width:100%;height:auto;display:block;border-radius:4px}
 @media(max-width:760px){.story-layout{grid-template-columns:minmax(0,1fr);max-width:600px}.story-photo{max-width:420px;margin-inline:auto}}
 </style>
+<style>
+.stay{padding:clamp(65px,9vw,115px) max(6vw,22px);max-width:1120px;margin:auto}
+.stay-head{max-width:620px}
+.stay-head p{color:var(--muted)}
+.stay-list{list-style:none;padding:0;margin:34px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.stay-card{display:flex;flex-direction:column;padding:24px;border:1px solid var(--line);background:white}
+.stay-card.featured{background:var(--blue);border-color:var(--blue)}
+.stay-card h3{font:30px/1.05 var(--serif);margin:10px 0 10px}
+.stay-card .stay-desc{color:var(--muted);font-size:15px;flex:1}
+.stay-card .button{align-self:flex-start;margin-top:20px;min-height:40px;padding:0 18px}
+.stay-card .button:hover,.stay-more .button:hover{background:var(--ink);color:white}
+.stay-more{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.stay-more .button{margin-top:0}
+.stay-note{margin-top:16px;font-size:14px;color:var(--muted)}
+</style>
 </head>
 <body>
-<header id="top"><a class="mark" href="index.html" aria-label="C and K home">C &amp; K</a><nav aria-label="Wedding navigation"><a href="index.html#wedding">Details</a><a href="dress-code.html">Dress Inspo</a><a href="index.html#rsvp">RSVP</a></nav></header>
+<header id="top"><a class="mark" href="index.html" aria-label="C and K home">C &amp; K</a><nav aria-label="Wedding navigation"><a href="index.html#wedding">Details</a><a href="dress-code.html">Dress Inspo</a><a href="index.html#stay">Stay</a><a href="index.html#rsvp">RSVP</a></nav></header>
 <main id="invitation">
 <section class="hero" aria-labelledby="title">
 <div class="hero-inner">
@@ -163,6 +178,25 @@ section[id]{scroll-margin-top:12px}
 </ol>
 </div>
 </section>
+<section class="stay" id="stay" aria-labelledby="stay-title">
+<div class="stay-head">
+<p class="label">Where to stay</p>
+<h2 id="stay-title">Accommodation</h2>
+<p>Brenton-on-Sea is a small seaside village, so we recommend booking early. These places are all close to Butterfly Blu, and Knysna town is about 15–20 minutes’ drive away if you’d like more options.</p>
+</div>
+<ul class="stay-list">
+<li class="stay-card featured"><p class="label">At the venue</p><h3>Brenton Haven Beachfront Resort</h3><p class="stay-desc">Butterfly Blu is Brenton Haven’s own restaurant, so you can stay right where we celebrate. Beachfront suites, villas and family homes on the dune, with a pool overlooking the sea.</p><a class="button" href="https://www.booking.com/hotel/za/brenton-haven.html" target="_blank" rel="noopener">View on Booking.com ↗</a></li>
+<li class="stay-card"><p class="label">Self-catering cabins</p><h3>Brenton on Sea Cottages</h3><p class="stay-desc">Self-catering log cabins with sea views and a pool, a short walk from Brenton Beach. Great for families or friends sharing.</p><a class="button" href="https://www.booking.com/hotel/za/brenton-on-sea-cottages.html" target="_blank" rel="noopener">View on Booking.com ↗</a></li>
+<li class="stay-card"><p class="label">Bed &amp; breakfast</p><h3>Brenton Beach House</h3><p class="stay-desc">A Cape Cod–style guest house with a pool, a fireplace lounge and breakfast included, about 500 m from the beach.</p><a class="button" href="https://www.booking.com/hotel/za/brenton-beach-house.html" target="_blank" rel="noopener">View on Booking.com ↗</a></li>
+<li class="stay-card"><p class="label">Guest house</p><h3>Brenton on the Rocks</h3><p class="stay-desc">A guest house on the cliffs above Buffels Bay with ocean-view rooms, an outdoor pool and breakfast.</p><a class="button" href="https://www.booking.com/hotel/za/on-the-rocks-guesthouse.html" target="_blank" rel="noopener">View on Booking.com ↗</a></li>
+<li class="stay-card"><p class="label">Self-catering units</p><h3>Brenton Breakers</h3><p class="stay-desc">Self-catering holiday units on the cliff edge overlooking Buffalo Bay, each with a kitchen and patio. Minimum check-in age 21.</p><a class="button" href="https://www.booking.com/hotel/za/brenton-breakers.html" target="_blank" rel="noopener">View on Booking.com ↗</a></li>
+</ul>
+<div class="stay-more">
+<a class="button" href="https://www.booking.com/searchresults.en-gb.html?ss=Brenton-on-Sea&amp;checkin=2027-05-01&amp;checkout=2027-05-02&amp;group_adults=2" target="_blank" rel="noopener">More in Brenton-on-Sea ↗</a>
+<a class="button" href="https://www.booking.com/searchresults.en-gb.html?ss=Knysna&amp;checkin=2027-05-01&amp;checkout=2027-05-02&amp;group_adults=2" target="_blank" rel="noopener">More in Knysna ↗</a>
+</div>
+<p class="stay-note">Searches are set for the wedding night (1–2 May 2027). Change the dates on Booking.com if you’re staying longer. Note there are no shops in Brenton-on-Sea, so stock up in Knysna on the way in.</p>
+</section>
 <section class="rsvp" id="rsvp" aria-labelledby="rsvp-title">
 <h2 id="rsvp-title">RSVP</h2>
 <p>Please complete one RSVP per guest. If you’re joining us, choose one dish from each of the three courses.</p>
@@ -198,7 +232,7 @@ section[id]{scroll-margin-top:12px}
   if (!('IntersectionObserver' in window)) return;
 
   const sections = document.querySelectorAll(
-    '.hero-inner, .intro > *, .detail-grid > *, .rsvp > *, ' +
+    '.hero-inner, .intro > *, .detail-grid > *, .stay > *, .rsvp > *, ' +
     '.attire-title > *, .attire > *, footer > *'
   );
   const observer = new IntersectionObserver(entries => {
